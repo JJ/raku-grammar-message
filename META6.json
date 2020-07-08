@@ -1,19 +1,22 @@
 {
-  "auth" : "",
-  "authors" : [],
-  "depends" : [
-    "JSON::Fast"
+  "name": "",
+  "description": "",
+  "version": "0.0.1",
+  "perl": "6.d",
+  "meta-version": 1,
+  "authors": [
+    "J. J. Merelo "
   ],
-  "description" : "",
-  "license" : "Artistic-2.0",
-  "name" : "",
-  "perl" : "6.d",
-  "provides" : { },
-  "resources" : [ ],
-  "source-url" : "",
-  "tags" : [
-    "modules"
+  "auth": "github:JJ",
+  "depends": [
+    "Terminal::ANSIColor"
   ],
-    "version" : "0.0.1",
-    "meta-version": 1
+  "provides": {},
+  "resources": [],
+  "license": "Artistic-2.0",
+  "tags": [
+    "grammars",
+    "exceptions"
+  ],
+  "source-url": "git@github.com:JJ/raku-grammar-message.git"
 }

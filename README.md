@@ -1,23 +1,25 @@
-# Raku Distribution Template
+# Grammar message
 
-Template for Raku modules, classes, roles, to be distributed as a
-single package in the ecosystem. Fill this README with your
-instructions.
+inspired by [Grammar::PrettyErrors](https://github.com/bduggan/p6-grammar
+-prettyerrors), and ripping off the code used there for printing messages
+, prints error messages highlighting the line and, if possible, the position
+ where it last worked.
 
 ## Installing
 
 
-<-- Fill your prerequisites here, how to install using zef, how to
-install from source -->
+    zef install Grammar::Message
 
 ## Running
 
-<-- Some examples, or pointing to a directory with them -->
 
 ## See also
 
-<-- Related stuff -->
+Original code by Brian Duggan in 
+[`Grammar::PrettyErrors`](https://github.com/bduggan/p6-grammar-prettyerrors
+) is the origin of this code.
 
 ## License
-<-- 
-This module will be licensed, by default, under the Artistic 2.0 License (the same as Raku itself). You can change it by using a different LICENSE file, as well as changing the license field in META6.json -->
+
+Respecting the original code license, this is also licensed under the
+ Artistic license (included).
