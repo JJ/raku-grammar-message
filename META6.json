@@ -20,5 +20,5 @@
     "grammars",
     "exceptions"
   ],
-  "source-url": "git@github.com:JJ/raku-grammar-message.git"
+  "source-url": "https://github.com/JJ/raku-grammar-message.git"
 }
