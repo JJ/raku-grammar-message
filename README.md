@@ -52,6 +52,10 @@ Some failure around here
 
 ```
 
+Take into account that the point will always be the best bet, and in any case
+ it will reflect the state of the `pos` attribute of the Match at the point
+  you saved it.
+  
 ## See also
 
 Original code by Brian Duggan in 
