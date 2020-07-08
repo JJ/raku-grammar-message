@@ -9,7 +9,9 @@ c
 EOS
 
 my $saved-match;
-$str ~~ / a { say $/.pos; $saved-match = $/} /;
-say pretty-message( "Found", $saved-match);
+$str ~~ / a { $saved-match = $/} /;
+my $msg = pretty-message( "Found", $saved-match);
+ok( $msg, "Produced message");
+like $msg, /"^"/, "Pointer created";
 
 done-testing;

@@ -25,9 +25,8 @@ sub pretty-message( Str $msg, Match $match ) is export {
     for @near {
         $i++;
         if $i==$line-no {
-            my $column = $match.pos - @lines-ranges[$i].value.min;
+            my $column = $match.pos - @lines-ranges[$i].value.min +1;
             @msg.push: color('bold yellow') ~ $i.fmt("%3d") ~ " │▶ $_" ~ color('reset');
-            say "MSG ", @msg;
             @msg.push: "     " ~ '^'.indent($column);
         } else {
             @msg.push: color('green') ~ $i.fmt("%3d") ~ " │ " ~ color('reset') ~ $_;
