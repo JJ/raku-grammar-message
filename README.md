@@ -33,6 +33,25 @@ Found
 
 with highlights for the matching line. 
 
+```perl6
+$str .= subst( "m", "mm" );
+G.parse( $str );
+say pretty-message( "Some failure around here", $saved-match);
+```
+
+will print
+
+```
+Some failure around here
+  4 │ jkl
+  5 │ mmno
+  6 │▶ pqr
+     ^
+  7 │ stu
+  8 │ vwx
+
+```
+
 ## See also
 
 Original code by Brian Duggan in 

@@ -20,3 +20,16 @@ $str ~~ / m { $saved-match = $/} /;
 $msg = pretty-message( "Found", $saved-match);
 like $msg.lines[4], /"^"/, "Pointer created";
 done-testing;
+
+grammar G {
+    token TOP { <letters>+ % \v}
+    token letters { { $saved-match = $/} \w ** 3 }
+}
+
+$str .= subst( "m", "mm" );
+
+nok G.parse( $str ), "Parse fails";
+$msg = pretty-message( "Some failure around here", $saved-match);
+like $msg.lines[4], /"^"/, "Pointer created";
+
+
