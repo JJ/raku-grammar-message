@@ -14,4 +14,9 @@ my $msg = pretty-message( "Found", $saved-match);
 ok( $msg, "Produced message");
 like $msg, /"^"/, "Pointer created";
 
+$str = (('a'..'z').rotor(3).map: *.join("")).join("\n");
+
+$str ~~ / m { $saved-match = $/} /;
+say $msg;
+
 done-testing;
