@@ -34,5 +34,5 @@ sub pretty-message( Str $msg, Match $match ) is export {
         }
     }
     @msg.push: "";
-    return @msg;
+    return @msg.join("\n");
 }
