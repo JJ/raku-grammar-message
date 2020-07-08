@@ -8,7 +8,6 @@ sub pretty-message( Str $msg, Match $match ) is export {
     my @lines-ranges;
     my $initial-char = 0;
     my $line-no = 0;
-    say $match.pos;
     for @lines -> $l {
         my $final-char = $initial-char + -1 + $l.chars;
         @lines-ranges.push:
@@ -21,7 +20,6 @@ sub pretty-message( Str $msg, Match $match ) is export {
     my @near = @lines[ $first.. (($line-no + 3) min @lines-1) ];
     my $i = $line-no - 3 max 0;
 
-    say $line-no;
     for @near {
         $i++;
         if $i==$line-no {
