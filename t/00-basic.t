@@ -17,6 +17,7 @@ like $msg, /"^"/, "Pointer created";
 $str = (('a'..'z').rotor(3).map: *.join("")).join("\n");
 
 $str ~~ / m { $saved-match = $/} /;
+$msg = pretty-message( "Found", $saved-match);
 say $msg;
 
 done-testing;
