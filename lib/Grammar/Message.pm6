@@ -24,10 +24,12 @@ sub pretty-message( Str $msg, Match $match ) is export {
         $i++;
         if $i==$line-no {
             my $column = $match.pos - @lines-ranges[$i].value.min;
-            @msg.push: color('bold yellow') ~ $i.fmt("%3d") ~ " │▶ $_" ~ color('reset');
+            @msg.push: color('bold red') ~ $i.fmt("%3d") ~ " │▶ $_"
+                    ~ color('reset');
             @msg.push: "     " ~ '^'.indent($column);
         } else {
-            @msg.push: color('green') ~ $i.fmt("%3d") ~ " │ " ~ color('reset') ~ $_;
+            @msg.push: color('magenta') ~ $i.fmt("%3d") ~ " │ "
+                    ~ color('reset') ~ $_;
         }
     }
     @msg.push: "";
