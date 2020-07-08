@@ -1,4 +1,4 @@
-use Test;
+use Test; # -*- mode: perl6 -*-
 
 use Grammar::Message;
 

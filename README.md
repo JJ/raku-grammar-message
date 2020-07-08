@@ -7,11 +7,31 @@ inspired by [Grammar::PrettyErrors](https://github.com/bduggan/p6-grammar
 
 ## Installing
 
-
     zef install Grammar::Message
 
 ## Running
 
+```perl6
+my $str = (('a'..'z').rotor(3).map: *.join("")).join("\n");
+my $saved-match; # Saves in situ
+$str ~~ / m { $saved-match = $/} /; # Code right behind match you need printed
+say pretty-message( "Found", $saved-match);
+```
+
+Will print
+
+```
+Found
+  3 │ ghi
+  4 │ jkl
+  5 │▶ mno
+        ^
+  6 │ pqr
+  7 │ stu
+  8 │ vwx
+```
+
+with highlights for the matching line. 
 
 ## See also
 
