@@ -1,6 +1,6 @@
 {
-  "name": "",
-  "description": "",
+  "name": "Grammar::Message",
+  "description": "Nice messages for grammars and regexes",
   "version": "0.0.1",
   "perl": "6.d",
   "meta-version": 1,
