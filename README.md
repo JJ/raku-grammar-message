@@ -58,11 +58,13 @@ Take into account that the point will always be the best bet, and in any case
   
 ## See also
 
-Original code by Brian Duggan in 
+Code by Brian Duggan in 
 [`Grammar::PrettyErrors`](https://github.com/bduggan/p6-grammar-prettyerrors
 ) is the origin of this code.
 
 ## License
+
+(c) Brian Duggan, JJ Merelo
 
 Respecting the original code license, this is also licensed under the
  Artistic license (included).
